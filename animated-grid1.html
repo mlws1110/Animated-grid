@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+    .animated-grid {
+   height: 85vh;
+   margin-bottom: 200px;
+ 
+   display: grid;
+   gap: 1rem;
+ 
+   /* Explicit grid */
+   grid-template-areas:
+     'a  b  c  d'
+     'l  🌟 🌟 e'
+     'k  🌟 🌟 f'
+     'j  i  h  g';
+ 
+   grid-template-rows: repeat(4, 25%);
+   grid-template-columns: 240px auto auto 240px;
+ 
+   --stagger-delay: 100ms;
+ }
+ 
+ @keyframes cardEntrance {
+   from {
+     opacity: 0;
+     transform: scale(0.3);
+     filter: hue-rotate(180deg);
+   }
+   to {
+     opacity: 1;
+     transform: scale(1);
+     filter: hue-rotate(0deg);
+   }
+ }
+ 
+ .card {
+   background-color: rgb(36, 243, 147);
+   animation: cardEntrance 700ms ease-out;
+   animation-fill-mode: backwards;
+ }
+ 
+ .card:nth-child(1) {
+   grid-area: a;
+   animation-delay: calc(1 * var(--stagger-delay));
+ }
+ .card:nth-child(2) {
+   grid-area: b;
+   animation-delay: calc(2 * var(--stagger-delay));
+ }
+ .card:nth-child(3) {
+   grid-area: c;
+   animation-delay: calc(3 * var(--stagger-delay));
+ }
+ .card:nth-child(4) {
+   grid-area: d;
+   animation-delay: calc(4 * var(--stagger-delay));
+ }
+ .card:nth-child(5) {
+   grid-area: e;
+   animation-delay: calc(5 * var(--stagger-delay));
+ }
+ .card:nth-child(6) {
+   grid-area: f;
+   animation-delay: calc(6 * var(--stagger-delay));
+ }
+ .card:nth-child(7) {
+   grid-area: g;
+   animation-delay: calc(7 * var(--stagger-delay));
+ }
+ .card:nth-child(8) {
+   grid-area: h;
+   animation-delay: calc(8 * var(--stagger-delay));
+ }
+ .card:nth-child(9) {
+   grid-area: i;
+   animation-delay: calc(9 * var(--stagger-delay));
+ }
+ .card:nth-child(10) {
+   grid-area: j;
+   animation-delay: calc(10 * var(--stagger-delay));
+ }
+ .card:nth-child(11) {
+   grid-area: k;
+   animation-delay: calc(11 * var(--stagger-delay));
+ }
+ .card:nth-child(12) {
+   grid-area: l;
+   animation-delay: calc(12 * var(--stagger-delay));
+ }
+ .card:last-child {
+   grid-area: 🌟;
+   animation-delay: calc(13 * var(--stagger-delay));
+ }
+ .card img {
+     width: 100%; /* Make image fill the card */
+     height: 100%; /* Maintain aspect ratio */
+     display: block; /* Remove any extra space below the image */
+     object-fit: cover; /* Ensures the image covers the area without distortion */
+     object-position: center; /* Centers the image within the element */
+ 
+ }
+ 
+    </style>
+ 
+    <title>Gallery</title>
+</head>
+<body>
+
+    <section class="animated-grid">
+    <div class="card"><img src="mush_forest.png" alt="mushrooms"></div>
+    <div class="card"><img src="DALL·E 2024-01-18 08.41.45 - A captivating image of a mushroom kingdom set in a mystical desert oasis. The scene features giant, colorful mushrooms sprouting amidst the sand dunes.png" alt="mushrooms"></div>
+    <div class="card"><img src="diverse range of unique and colorful mushrooms .png" alt="mushrooms"></div>
+    <div class="card"><img src="alchemist's study.png" alt="mushrooms"></div>
+    <div class="card"><img src="mystical_mush.png" alt="mushrooms"></div>
+    <div class="card"><img src="DALL·E 2024-01-18 08.26.01 - A captivating image showing a close-up of vibrant blue and purple mushrooms with delicate, intricate caps, growing in a dark, mystical forest. The env.png" alt="mushrooms"></div>
+    <div class="card"><img src="DALL·E 2024-01-18 08.41.32 - An enchanting image of a celestial mushroom kingdom in space, with mushrooms growing on floating islands among the stars. The mushrooms are illuminate.png" alt="mushrooms"></div>
+    <div class="card"><img src="DALL·E 2024-01-18 08.29.46 - A stunning image of a group of bioluminescent mushrooms glowing in a nocturnal forest setting. These mushrooms emit a soft, ethereal light in shades o.png" alt="mushrooms"></div>
+    <div class="card"><img src="DALL·E 2024-01-18 08.24.38 - A visually stunning and realistic image of a variety of mushrooms in a natural forest setting. The scene includes different types of mushrooms such as.png" alt="mushrooms"></div>
+    <div class="card"><img src="DALL·E 2024-01-18 08.41.38 - A majestic and surreal image of an underwater mushroom kingdom, featuring bioluminescent mushrooms in vibrant colors of blue, purple, and green. The k.png" alt="mushrooms"></div>
+    <div class="card"><img src="mushroom_plate.png" alt="mushrooms"></div>
+    <div class="card"><img src="mushroom-vortex.png" alt="mushrooms"></div>
+    <div class="card"><img src="DALL·E 2024-01-18 08.28.50 - An epic and fantastical image of a mushroom kingdom, resembling a scene from a fantasy movie. The kingdom is made up of towering, majestic mushroom st.png" alt="mushrooms"></div>
+    </section>
+
+</body>
+</html>
