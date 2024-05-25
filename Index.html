@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Grid</title>
+    <style>
+        .animated-grid {
+            height: 85vh;
+            margin-bottom: 200px;
+            display: grid;
+            gap: 1rem;
+        }
+        /* Explicit grid */
+        grid-template-areas: 'a b c d' 'e f g h' 'i j k l' 'm n o p';
+        grid-template-rows: repeat(4, 25%);
+        grid-template-columns: 240px auto auto 240px;
+        --stagger-delay: 108ms;
+
+        @keyframes cardEntrance {
+            from {
+                opacity: 0;
+                transform: scale(0.3);
+                filter: hue-rotate(180deg);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+                filter: hue-rotate(0deg);
+            }
+        }
+        .card {
+            animation: cardEntrance var(--stagger-delay) ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-grid">
+        <!-- Your grid items go here -->
+        <div class="card" style="grid-area: a;">Item 1</div>
+        <div class="card" style="grid-area: b;">Item 2</div>
+        <div class="card" style="grid-area: c;">Item 3</div>
+        <div class="card" style="grid-area: d;">Item 4</div>
+        <div class="card" style="grid-area: e;">Item 5</div>
+        <div class="card" style="grid-area: f;">Item 6</div>
+        <div class="card" style="grid-area: g;">Item 7</div>
+        <div class="card" style="grid-area: h;">Item 8</div>
+        <div class="card" style="grid-area: i;">Item 9</div>
+        <div class="card" style="grid-area: j;">Item 10</div>
+        <div class="card" style="grid-area: k;">Item 11</div>
+        <div class="card" style="grid-area: l;">Item 12</div>
+        <div class="card" style="grid-area: m;">Item 13</div>
+        <div class="card" style="grid-area: n;">Item 14</div>
+        <div class="card" style="grid-area: o;">Item 15</div>
+        <div class="card" style="grid-area: p;">Item 16</div>
+    </div>
+</body>
+</html>
